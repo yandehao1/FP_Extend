@@ -2,7 +2,9 @@ namespace FpUtility.Fp_Model
 {
     using System;
     using System.Collections.Generic;
-    
+    /// <summary>
+    /// 定义访问权限的角色
+    /// </summary>
     public partial class Role
     {
         public string id { get; set; }

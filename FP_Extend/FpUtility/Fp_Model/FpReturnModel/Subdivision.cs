@@ -2,7 +2,9 @@ namespace FpUtility.Fp_Model
 {
     using System;
     using System.Collections.Generic;
-    
+    /// <summary>
+    /// ±ùÏä²ã´Î½á¹¹
+    /// </summary>
     public partial class Subdivision
     {
         public string id { get; set; }

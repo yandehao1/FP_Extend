@@ -2,7 +2,9 @@ namespace FpUtility.Fp_Model
 {
     using System;
     using System.Collections.Generic;
-    
+    /// <summary>
+    /// ”√ªß
+    /// </summary>
     public partial class User
     {
         public string id { get; set; }

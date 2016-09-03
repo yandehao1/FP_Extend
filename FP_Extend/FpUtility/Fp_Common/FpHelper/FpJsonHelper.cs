@@ -9,7 +9,7 @@ namespace FpUtility.Fp_Common
 {
     public class FpJsonHelper
     {
-#region 取API返回的数据中的文本对象,比如Total + public static string stringToobject(string str, string json)
+        #region 取API返回的数据中的文本对象,比如Total + public static string stringToobject(string str, string json)
         /// <summary>
         /// 取API返回的数据中的文本对象,比如Total
         /// </summary>
@@ -154,7 +154,7 @@ namespace FpUtility.Fp_Common
         /// <typeparam name="T">待转换的对象类型</typeparam>
         /// <param name="jsonStr">字符串</param>
         /// <returns>对象</returns>
-        public static T JsonStrToObject<T>(string jsonStr) where T:class
+        public static T JsonStrToObject<T>(string jsonStr) where T : class
         {
             T obj = JsonConvert.DeserializeObject(jsonStr, typeof(T)) as T;
             return obj;
@@ -165,7 +165,7 @@ namespace FpUtility.Fp_Common
             return JsonConvert.DeserializeObject(str, typeof(T)) as T;
         }
 
-        #region dataTable转换成Json格式 
+        #region dataTable转换成Json格式
         ///<summary> 
         /// dataTable转换成Json格式 
         ///</summary> 
@@ -194,7 +194,7 @@ namespace FpUtility.Fp_Common
             jsonBuilder.Append("]");
             jsonBuilder.Append("}");
             return jsonBuilder.ToString();
-        } 
+        }
         #endregion
 
         #region DataSet转换成Json格式
@@ -217,7 +217,7 @@ namespace FpUtility.Fp_Common
             json.Append("]");
             json.Append("}");
             return json.ToString();
-        } 
+        }
         #endregion
 
         /// <summary>

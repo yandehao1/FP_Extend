@@ -7,8 +7,16 @@ using FpUtility.Fp_Model;
 
 namespace FpUtility.Fp_BLL
 {
+    /// <summary>
+    /// 样本源操作
+    /// </summary>
     public class SampleSocrce
     {
+        /// <summary>
+        /// 读取所有的样本源类型
+        /// </summary>
+        /// <param name="up"></param>
+        /// <returns></returns>
         public static List<Fp_Model.SampleSourceTypes> GetAll(Fp_Common.UnameAndPwd up)
         {
             Dictionary<string, string> dic = new Dictionary<string, string>();
@@ -19,7 +27,12 @@ namespace FpUtility.Fp_BLL
             List<Fp_Model.SampleSourceTypes> List = call.getdata<Fp_Model.SampleSourceTypes>("SampleSourceTypes");
             return List;
         }
-
+        /// <summary>
+        /// 根据名称获取样本源
+        /// </summary>
+        /// <param name="up"></param>
+        /// <param name="name"></param>
+        /// <returns></returns>
         public static Fp_Model.SampleSourceTypes GetSampleSourceTypeByTypeName(Fp_Common.UnameAndPwd up, string name)
         {
             List<Fp_Model.SampleSourceTypes> list = GetAll(up);
@@ -30,7 +43,13 @@ namespace FpUtility.Fp_BLL
             }
             return resObj;
         }
-
+        /// <summary>
+        /// 导入样本源
+        /// </summary>
+        /// <param name="up"></param>
+        /// <param name="sampleSourceTypeName"></param>
+        /// <param name="jsonDic"></param>
+        /// <returns></returns>
         public static string ImportSampleSourceDataToFp(Fp_Common.UnameAndPwd up, string sampleSourceTypeName, Dictionary<string, string> jsonDic)
         {
             string result = string.Empty;
@@ -48,7 +67,11 @@ namespace FpUtility.Fp_BLL
             result = call.PostData();
             return result;
         }
-
+        /// <summary>
+        /// 导出样本源类型，返回Dictionary格式
+        /// </summary>
+        /// <param name="up"></param>
+        /// <returns></returns>
         public static Dictionary<string, string> GetAllIdAndNamesDic(Fp_Common.UnameAndPwd up)
         {
             Dictionary<string, string> dic = new Dictionary<string, string>();
@@ -68,7 +91,6 @@ namespace FpUtility.Fp_BLL
         /// </summary>
         /// <param name="typeName">指定样本元类型名称</param>
         /// <returns>字段集合</returns>
-
         public static List<string> GetSampleSourceTypeFieldByTypeName(Fp_Common.UnameAndPwd up, string typeName)
         {
             List<string> sampleSourceTypeField = new List<string>();
@@ -91,6 +113,11 @@ namespace FpUtility.Fp_BLL
             }
             return sampleSourceTypeField;
         }
+        /// <summary>
+        /// 检查导入
+        /// </summary>
+        /// <param name="jsonResStr"></param>
+        /// <returns></returns>
         private static string CheckImportRes(string jsonResStr)
         {
             //检测是否导入成功

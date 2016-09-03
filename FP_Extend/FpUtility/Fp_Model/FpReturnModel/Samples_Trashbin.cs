@@ -6,6 +6,9 @@ using System.Text;
 using System.Threading;
 namespace FpUtility.Fp_Model
 {
+    /// <summary>
+    /// 垃圾桶内的样本
+    /// </summary>
    public class Samples_Trashbin
     {
        public string loc_id { get; set; }

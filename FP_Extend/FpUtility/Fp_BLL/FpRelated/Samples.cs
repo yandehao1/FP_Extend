@@ -7,6 +7,9 @@ using System.Text;
 
 namespace FpUtility.Fp_BLL
 {
+    /// <summary>
+    /// 样本操作
+    /// </summary>
     public class Samples
     {
 
@@ -29,7 +32,15 @@ namespace FpUtility.Fp_BLL
         //创建存储结构盒子使用bag 导入失败创建新的bag
 
         //综上所述：使用方式 1 +方式 4   非常规方式使用6
-
+        /// <summary>
+        /// 导入样本
+        /// </summary>
+        /// <param name="up"></param>
+        /// <param name="department"></param>
+        /// <param name="sample_type"></param>
+        /// <param name="count"></param>
+        /// <param name="dataDic"></param>
+        /// <returns></returns>
         public static string Import_Sample(Fp_Common.UnameAndPwd up, string department, string sample_type, string count, Dictionary<string, string> dataDic)
         {
             string username = Fp_Common.CookieHelper.GetCookieValue("username");
@@ -57,7 +68,13 @@ namespace FpUtility.Fp_BLL
             return result;
         }
 
-
+        /// <summary>
+        /// 导入样本
+        /// </summary>
+        /// <param name="up"></param>
+        /// <param name="department"></param>
+        /// <param name="dataDicList"></param>
+        /// <returns></returns>
         public static string Import_Sample(Fp_Common.UnameAndPwd up, string department, List<Dictionary<string, string>> dataDicList)
         {
             string username = Fp_Common.CookieHelper.GetCookieValue("username");
@@ -84,7 +101,16 @@ namespace FpUtility.Fp_BLL
             }
             return result;
         }
-        //创建盒子保存样本
+        
+       /// <summary>
+        ///创建盒子保存样本
+       /// </summary>
+       /// <param name="up"></param>
+       /// <param name="sample_type"></param>
+       /// <param name="count"></param>
+       /// <param name="box_path"></param>
+       /// <param name="dataDic"></param>
+       /// <returns></returns>
         private static string ImportSamplesToFp(Fp_Common.UnameAndPwd up, string sample_type, string count, Box_Path box_path, Dictionary<string, string> dataDic)
         {
             string jsonsampledata = string.Empty;
@@ -163,6 +189,11 @@ namespace FpUtility.Fp_BLL
         }
 
         #region 获取样品类型集合 +  public List<SampleTypes>  GetAllSample_Types(string url)
+        /// <summary>
+        /// 获取样品类型集合
+        /// </summary>
+        /// <param name="up"></param>
+        /// <returns></returns>
         public static List<SampleTypes> GetAll(Fp_Common.UnameAndPwd up)
         {
             Dictionary<string, string> dic = new Dictionary<string, string>();
@@ -197,6 +228,12 @@ namespace FpUtility.Fp_BLL
         #endregion
 
         #region 获取样品类型根据名称 + public static SampleTypes GetSample_TypeByTypeName(string url, string name)
+        /// <summary>
+        /// 根据名称获取样本类型
+        /// </summary>
+        /// <param name="up"></param>
+        /// <param name="name"></param>
+        /// <returns></returns>
         public static SampleTypes GetBy(Fp_Common.UnameAndPwd up, string name)
         {
             List<SampleTypes> list = GetAll(up);
@@ -217,8 +254,14 @@ namespace FpUtility.Fp_BLL
         //第一步到指定位置查找空位
         //第二部找到位置就添加样本
         //第三部没好到就添加样本盒（样本盒名称怎么获取）--获取冰箱（根据名称）--->根据冰箱名获取冰箱id-->根据冰箱id获取冰箱分支---->根据用户名获取对应的分支id---->月份分支---->日分支id----->boxes获取当前分支下的所有盒子，判断盒子是否存在（根据名字判断盒子）
-
         //生成默认临时储存结构的方法--目的，查看对应位置是否存在可以存放样本的孔
+        /// <summary>
+        /// 根据日期创建一个临时的冰箱
+        /// </summary>
+        /// <param name="up"></param>
+        /// <param name="department"></param>
+        /// <param name="creat"></param>
+        /// <returns></returns>
         private static Fp_Model.Box_Path CreatTemFreezerPath(Fp_Common.UnameAndPwd up, string department, out bool creat)
         {
             FpUtility.Fp_Model.Box_Path box_path = new Box_Path();
@@ -322,6 +365,12 @@ namespace FpUtility.Fp_BLL
         }
 
         #region 提交数据到fp +private static string ImportSampleToFp(Fp_Common.UnameAndPwd up, Dictionary<string, string> jsonDic)
+        /// <summary>
+        /// 提交样本数据到系统
+        /// </summary>
+        /// <param name="up"></param>
+        /// <param name="jsonDic"></param>
+        /// <returns></returns>
         private static string ImportSampleToFp(Fp_Common.UnameAndPwd up, Dictionary<string, string> jsonDic)
         {
             string result = string.Empty;
@@ -341,7 +390,11 @@ namespace FpUtility.Fp_BLL
             return result;
         }
         #endregion
-
+        /// <summary>
+        /// 检查导入
+        /// </summary>
+        /// <param name="jsonResStr"></param>
+        /// <returns></returns>
         private static string CheckImportRes(string jsonResStr)
         {
             //检测是否导入成功
@@ -362,6 +415,13 @@ namespace FpUtility.Fp_BLL
 
 
         //提交数据新方法，一个dg一次提交
+        /// <summary>
+        /// 提交样本数据到系统
+        /// </summary>
+        /// <param name="up"></param>
+        /// <param name="box_path"></param>
+        /// <param name="dataDicList"></param>
+        /// <returns></returns>
         public static string ImportSamplesToFp(Fp_Common.UnameAndPwd up, Box_Path box_path, List<Dictionary<string, string>> dataDicList)
         {
 
@@ -401,7 +461,14 @@ namespace FpUtility.Fp_BLL
             string importRes = ImportSampleToFp(up, jsonDic);
             return importRes;
         }
-
+        /// <summary>
+        /// 数据转换
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="fpMethod"></param>
+        /// <param name="param"></param>
+        /// <param name="datawith"></param>
+        /// <returns></returns>
         public static List<T> getdata<T>(FpMethod fpMethod, Dictionary<string, string> param, string datawith)
         {
             List<T> list = new List<T>();

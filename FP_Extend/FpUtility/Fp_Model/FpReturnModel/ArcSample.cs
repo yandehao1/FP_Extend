@@ -2,7 +2,9 @@ namespace FpUtility.Fp_Model
 {
     using System;
     using System.Collections.Generic;
-
+    /// <summary>
+    /// 表示从冷冻室和垃圾箱中取出的样品，并将其移动到只读样品归档属性中
+    /// </summary>
     public partial class ArcSample
     {
         public string id { get; set; }

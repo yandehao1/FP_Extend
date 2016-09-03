@@ -6,7 +6,7 @@ using System.Text;
 namespace FpUtility.Fp_BLL
 {
     /// <summary>
-    /// 检查数据类
+    /// 检查FP返回的数据类
     /// </summary>
     internal static class ValidationData
     {
@@ -51,5 +51,27 @@ namespace FpUtility.Fp_BLL
             return Json.Contains("auth_token");
         } 
         #endregion
+
+        /// <summary>
+        /// 检查导入
+        /// </summary>
+        /// <param name="jsonResStr"></param>
+        /// <returns></returns>
+        private static string CheckImportRes(string jsonResStr)
+        {
+            //检测是否导入成功
+            if (string.IsNullOrEmpty(jsonResStr))
+            {
+                return "url或方法错误";
+            }
+            else if (jsonResStr == "1")
+            {
+                return "";
+            }
+            else
+            {
+                return "";
+            }
+        }
     }
 }

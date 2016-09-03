@@ -5,8 +5,16 @@ using System.Text;
 
 namespace FpUtility.Fp_BLL
 {
+    /// <summary>
+    /// 样本组操作
+    /// </summary>
     public class SampleGroup
     {
+        /// <summary>
+        /// 获取系统里里面的样本组
+        /// </summary>
+        /// <param name="up"></param>
+        /// <returns></returns>
         public static List<Fp_Model.Sample_Group> GetAll(Fp_Common.UnameAndPwd up)
         {
             Dictionary<string, string> dic = new Dictionary<string, string>();
@@ -22,6 +30,12 @@ namespace FpUtility.Fp_BLL
         //    List<Fp_Model.Sample_Group> List = Fp_DAL.DataWithFP.getdata<Fp_Model.Sample_Group>(url, Fp_Common.FpMethod.sample_groups, "", "SampleGroups");
         //    return List;
         //}
+        /// <summary>
+        /// 根据样本组名称查询出样本组
+        /// </summary>
+        /// <param name="up"></param>
+        /// <param name="name"></param>
+        /// <returns></returns>
         public static Fp_Model.Sample_Group GetBy(Fp_Common.UnameAndPwd up, string name)
         {
             List<Fp_Model.Sample_Group> List = GetAll(up);

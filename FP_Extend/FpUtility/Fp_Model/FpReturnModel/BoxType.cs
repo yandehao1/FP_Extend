@@ -5,6 +5,9 @@ namespace FpUtility.Fp_Model
     
     public partial class BoxType
     {
+        /// <summary>
+        /// 样本盒子的类型
+        /// </summary>
         public string id { get; set; }
         public  string  obj_id { get; set; }
         public string name { get; set; }

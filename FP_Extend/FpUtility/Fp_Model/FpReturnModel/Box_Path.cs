@@ -5,6 +5,9 @@ using System.Text;
 
 namespace FpUtility.Fp_Model
 {
+    /// <summary>
+    /// 盒子的等级
+    /// </summary>
    public class Box_Path
     {
         public string  Freezer { get; set; }

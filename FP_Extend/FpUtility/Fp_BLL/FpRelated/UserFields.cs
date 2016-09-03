@@ -6,10 +6,18 @@ using System.Text;
 
 namespace FpUtility.Fp_BLL
 {
+    /// <summary>
+    /// 自定义字段
+    /// </summary>
     public class UserFields
     {        //创建数据层对象
 
         #region 获取自定义字段集合 + public List<UserFields> UserFields()
+        /// <summary>
+        /// 获取自定义字段的集合
+        /// </summary>
+        /// <param name="up"></param>
+        /// <returns></returns>
         public static List<Fp_Model.UserFields> GetAll(Fp_Common.UnameAndPwd up)
         {
             Dictionary<string, string> dic = new Dictionary<string, string>();

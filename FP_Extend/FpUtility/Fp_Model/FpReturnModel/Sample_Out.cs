@@ -7,6 +7,9 @@ using System.Threading;
 
 namespace FpUtility.Fp_Model
 {
+    /// <summary>
+    /// 
+    /// </summary>
    public partial class Sample_Out
     {
        public int obj_id { get; set; }

@@ -83,7 +83,6 @@ namespace RURO.DALFactory
 		/// </summary>
 		public static RURO.IDAL.ITB_PARAMETER CreateTB_PARAMETER()
 		{
-
 			string ClassNamespace = AssemblyPath +".TB_PARAMETER";
 			object objType=CreateObject(AssemblyPath,ClassNamespace);
 			return (RURO.IDAL.ITB_PARAMETER)objType;

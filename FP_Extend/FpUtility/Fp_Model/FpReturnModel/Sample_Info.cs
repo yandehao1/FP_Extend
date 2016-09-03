@@ -7,6 +7,9 @@ using System.Threading;
 
 namespace FpUtility.Fp_Model
 {
+    /// <summary>
+    /// 样本的信息
+    /// </summary>
     public class Sample_Info
     {
         public string id { get; set; }

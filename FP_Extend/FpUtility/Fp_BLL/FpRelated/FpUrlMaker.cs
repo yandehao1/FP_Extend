@@ -7,6 +7,11 @@ namespace FpUtility.Fp_BLL
 {
     public class FpUrlMaker
     {
+        /// <summary>
+        /// 对URL加上账户密码
+        /// </summary>
+        /// <param name="username"></param>
+        /// <param name="password"></param>
         public FpUrlMaker(string username,string password)
         {
             this.UserName = username;

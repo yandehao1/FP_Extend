@@ -2,7 +2,9 @@ namespace FpUtility.Fp_Model
 {
     using System;
     using System.Collections.Generic;
-    
+    /// <summary>
+    /// 一个样本的位置
+    /// </summary>
     public partial class Location
     {
         public string id { get; set; }

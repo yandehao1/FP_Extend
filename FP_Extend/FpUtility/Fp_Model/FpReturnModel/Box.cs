@@ -2,7 +2,9 @@ namespace FpUtility.Fp_Model
 {
     using System;
     using System.Collections.Generic;
-    
+    /// <summary>
+    /// 样本的盒子
+    /// </summary>
     public partial class Box
     {
         public string id { get; set; }

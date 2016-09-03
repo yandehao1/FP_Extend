@@ -2,7 +2,9 @@ namespace FpUtility.Fp_Model
 {
     using System;
     using System.Collections.Generic;
-    
+    /// <summary>
+    /// Ñù±¾Ô´
+    /// </summary>
     public partial class Sample_Source
     {
         public string id { get; set; }

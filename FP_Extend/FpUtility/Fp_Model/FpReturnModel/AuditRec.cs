@@ -11,7 +11,9 @@ namespace FpUtility.Fp_Model
 {
     using System;
     using System.Collections.Generic;
-    
+    /// <summary>
+    /// 审计日志记录
+    /// </summary>
     public partial class AuditRec
     {
         public string id { get; set; }

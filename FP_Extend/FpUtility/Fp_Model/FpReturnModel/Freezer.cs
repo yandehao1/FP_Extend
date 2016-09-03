@@ -2,7 +2,9 @@ namespace FpUtility.Fp_Model
 {
     using System;
     using System.Collections.Generic;
-    
+    /// <summary>
+    /// ±ùÏäµÄÊı¾İ
+    /// </summary>
     public partial class Freezer
     {
         public string id { get; set; }

@@ -8,7 +8,13 @@ namespace FpUtility.Fp_BLL
 {
     public class Get_Perfect_Box
     {
-        /// 查询指定冰箱指定位置是否存在符合条件的盒子
+        /// <summary>
+        ///  查询指定冰箱指定位置是否存在符合条件的盒子
+        /// </summary>
+        /// <param name="up">登陆账号</param>
+        /// <param name="space">所需空间</param>
+        /// <param name="freezer_name">冰箱名称</param>
+        /// <returns></returns>
         public static string get_perfect_box(Fp_Common.UnameAndPwd up, string space, string freezer_name)
         {
             string resultStr = string.Empty;

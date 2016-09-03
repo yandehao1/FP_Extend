@@ -6,6 +6,9 @@ using System.Linq;
 using System.Text;
 namespace FpUtility.Fp_BLL
 {
+    /// <summary>
+    /// 检查登陆
+    /// </summary>
     public class Token
     {
         public string UserName { get; set; }
@@ -22,6 +25,10 @@ namespace FpUtility.Fp_BLL
             PassWord = up.PassWord;
         }
         #endregion
+        /// <summary>
+        /// 检查登陆
+        /// </summary>
+        /// <returns></returns>
         private string Get_Auth_Token()
         {
             Dictionary<string, string> dic = new Dictionary<string, string>();
