@@ -36,7 +36,7 @@
     <SccProvider>
     </SccProvider>
     <OldToolsVersion>3.5</OldToolsVersion>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -52,6 +52,7 @@
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <OutputPath>bin\Debug\</OutputPath>
@@ -106,6 +107,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Lib\COM.Excel.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="OpenSmtp, Version=1.11.0.34196, Culture=neutral">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Lib\OpenSmtp.dll</HintPath>
@@ -127,6 +132,7 @@
     <Reference Include="System.Web">
       <Name>System.Web</Name>
     </Reference>
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml">
       <Name>System.XML</Name>
     </Reference>
@@ -134,6 +140,7 @@
   <ItemGroup>
     <Compile Include="CookieHelper.cs" />
     <Compile Include="HttpProc.cs" />
+    <Compile Include="JSON\JsonHelper.cs" />
     <Compile Include="LogHelper.cs" />
     <Compile Include="MailSender.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -170,6 +177,9 @@
     <Compile Include="StringPlus.cs" />
     <Compile Include="TimeParser.cs" />
     <Compile Include="UrlOper.cs" />
+    <Compile Include="XML\XmlHelper.cs" />
+    <Compile Include="XML\XMLProcess.cs" />
+    <Compile Include="XML\XmlUtil.cs" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
@@ -188,6 +198,7 @@
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PreBuildEvent>

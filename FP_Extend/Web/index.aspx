@@ -36,7 +36,7 @@
             <div title="插件管理" data-options="iconCls:'icon-sys'" style="overflow: auto; padding: 0px;">
                 <ul>
                     <li>
-                        <div><a target="mainFrame" rel="Pages/Search.aspx"><span></span>字段设定</a></div>
+                        <div><a target="mainFrame" rel="Pages/GetFPSampleSources.aspx"><span></span>获取系统的样本源</a></div>
                     </li>
 <%--                    <li>
                         <div><a target="mainFrame" rel="ZSSY/SpecimenRtLog/ResHis.aspx"><span></span>回发数据</a></div>

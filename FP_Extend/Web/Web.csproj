@@ -442,6 +442,7 @@
     <Content Include="include\css\Style.css" />
     <Content Include="index.aspx" />
     <Content Include="Login.aspx" />
+    <Content Include="pages\GetFPSampleSources.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -465,6 +466,13 @@
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\GetFPSampleSources.aspx.cs">
+      <DependentUpon>GetFPSampleSources.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\GetFPSampleSources.aspx.designer.cs">
+      <DependentUpon>GetFPSampleSources.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -499,7 +507,6 @@
     <Folder Include="Error\AppError\" />
     <Folder Include="Error\AppExError\" />
     <Folder Include="FP_Ajax\" />
-    <Folder Include="page\" />
     <Folder Include="test\" />
   </ItemGroup>
   <PropertyGroup>
